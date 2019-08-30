@@ -19,6 +19,7 @@ public class AttendanceViewHolder extends RecyclerView.ViewHolder {
     public void bind(StudentEntity student) {
 
         mBinding.tvName.setText(student.getName());
+        mBinding.tvId.setText(String.valueOf(student.getId()));
 
         mBinding.cbPresent.setOnCheckedChangeListener(null);
         mBinding.cbAbsent.setOnCheckedChangeListener(null);

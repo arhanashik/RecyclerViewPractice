@@ -8,16 +8,27 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="1302018"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cb_present"
+            app:layout_constraintBottom_toTopOf="@+id/tv_name"/>
+
+        <TextView
             android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="Fahim"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cb_present"
-            app:layout_constraintEnd_toStartOf="@+id/cb_present"
-            app:layout_constraintBottom_toBottomOf="@+id/cb_present"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_id"
+            app:layout_constraintEnd_toStartOf="@+id/cb_present"/>
 
         <CheckBox
             android:id="@+id/cb_present"
@@ -26,8 +37,9 @@
             android:padding="5dp"
             android:textSize="12sp"
             android:text="@string/label_present"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/cb_absent"/>
+            app:layout_constraintTop_toTopOf="@+id/tv_id"
+            app:layout_constraintEnd_toStartOf="@+id/cb_absent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_name"/>
 
         <CheckBox
             android:id="@+id/cb_absent"
@@ -35,8 +47,9 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:text="@string/label_absent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="@+id/cb_present"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_present"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
